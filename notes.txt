@@ -1,14 +1,31 @@
+// CITE: https://www.codeproject.com/articles/871622/writing-a-chat-server-using-node-js-typescript-and
+
+Plan: 
+	Write back end first
+		Routes for a post to /login and /message
+		Uses ws library to receive the message and then broadcast it back out
+	Write front end next
+		Uses react
+
+Hickups:
+	Installing/setting up TypeScript (Node on this laptop old version)
+	Using REACT for front end
+
+
 Ideas: WebSockets library?
 
 
 # Setting up:
 Install node.js
+Make project and npm init once in
 Install typescript globally on machine:
 	npm install -g typescript
 
 	ERROR: Wants node 4.2.0+, only have installed node 2.10.1
 
-Make project and npm init once in
+Install express
+Install REACT (??) -- the tricky piece
+
 
 Set up a git ignore file for the project
 
@@ -31,6 +48,30 @@ class Message {
 	user: string;
 	message: string;
 
-	
+	constructor...
+		// accepts the payload, parses the json and assigns it to user and message
+
 }
 
+
+
+
+
+Also on the back end we need to write the server
+
+import the models, require in the websocket module, and set up the server on a port (process.env.PORT || 3000) 
+
+
+
+launc the server
+
+On a connection (server.on('connection'))) we can pass in ws and try to instantiate a new Message, then immediately call a function broadcast(...) and send that message back out
+
+The broadcast function can take the string and iterate through all of the clients and send the data to them
+
+
+Need to also handle when a connection comes in that's just the username from a login versus when its a post
+
+
+So need an express template based API:
+	a post to /login will be routed by express
