@@ -1,0 +1,36 @@
+Ideas: WebSockets library?
+
+
+# Setting up:
+Install node.js
+Install typescript globally on machine:
+	npm install -g typescript
+
+	ERROR: Wants node 4.2.0+, only have installed node 2.10.1
+
+Make project and npm init once in
+
+Set up a git ignore file for the project
+
+If using websockets libary, install it & update packages.json using
+	npm install --save ws
+
+Make sure our compiled JS goes into a /build folder
+TS goes into /src
+/declarations --> used to declare third party modules. There are some available at DefinitelyTyped project page (https://github.com/borisyankov/DefinitelyTyped)
+
+
+
+
+# Data model
+Don't need DB, running in-memory
+Can set up a data model as a close:
+
+
+class Message {
+	user: string;
+	message: string;
+
+	
+}
+
