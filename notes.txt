@@ -1,8 +1,7 @@
-// CITE: https://www.codeproject.com/articles/871622/writing-a-chat-server-using-node-js-typescript-and
-
 Plan: 
 	Write back end first
 		Routes for a post to /login and /message
+		Use websockets library
 		Uses ws library to receive the message and then broadcast it back out
 	Write front end next
 		Uses react
@@ -12,24 +11,74 @@ Hickups:
 	Using REACT for front end
 
 
+Tutorials: 
+	http://brianflove.com/2016/11/08/typescript-2-express-node/
+
+	https://inviqa.com/blog/using-typescript-node-js
+
+
+
+// CITE: https://www.codeproject.com/articles/871622/writing-a-chat-server-using-node-js-typescript-and
+
+
+Updating node: https://docs.npmjs.com/getting-started/installing-node
+
+npm install npm@latest -g
+
+
+
+
+
 Ideas: WebSockets library?
 
-
-# Setting up:
+############
+Setting up:
+############
 Install node.js
-Make project and npm init once in
-Install typescript globally on machine:
-	npm install -g typescript
+Initialize node project
+	npm init  # done
+Update the package.json similar to the tutorial
+
+	
+Start script
+	make empty file at /bin/www
+	see tutorail
+
+Install typescript
+	npm install typescript --save-dev
 
 	ERROR: Wants node 4.2.0+, only have installed node 2.10.1
 
+	tsc --init   // Adds a tsconfig.json file
+		update compilerOptions: to have a "outDir": "build"   line
+
+Typings:
+	npm install -g typings  // or --save-dev if can't use -g flag
+	typings init
+	typings install dt~node --save 
+	typings install dt~node --save --global
+	typings install dt~es6-shim --save --global
+	typings install dt~express --save --global
+	typings install dt~serve-static --save --global
+	typings install dt~express-serve-static-core --save --global
+	typings install dt~mime --save --global
+
 Install express
+	npm install express --save
+
+Install nodemon
+	npm install nodemon -g nodemon
+
+put the app files in own folder (app):
+	make a file called app/server.ts inside there
+	contollers folder and file?
+
 Install REACT (??) -- the tricky piece
 
 
-Set up a git ignore file for the project
+Add folder
 
-If using websockets libary, install it & update packages.json using
+websockets libary
 	npm install --save ws
 
 Make sure our compiled JS goes into a /build folder
