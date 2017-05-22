@@ -52,7 +52,7 @@ Install typescript
 	tsc --init   // Adds a tsconfig.json file
 		update compilerOptions: to have a "outDir": "build"   line
 
-Typings:
+Install Typings (May not have needed *all* of these)
 	npm install -g typings  // or --save-dev if can't use -g flag
 	typings init
 	typings install dt~node --save 
@@ -73,8 +73,8 @@ put the app files in own folder (app):
 	make a file called app/server.ts inside there
 	contollers folder and file?
 
-Install REACT (??) -- the tricky piece
-
+Install REACT
+	npm install --save react react-dom
 
 Add folder
 
