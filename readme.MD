@@ -18,10 +18,14 @@
 
 
 ## Usage
-Compile:
-    npm run build  # compiles to build/bundle.js
-	tsc  # compiles to separate js files
-Open index.html to view the page that renders the Hello React component using webpack, otherwise manually run the server.ts currently is basic node server; node build/server.js will run compiled version
+For testing the react components individually
+    $ npm run build  # compiles to build/bundle.js
+	$ tsc  # compiles to separate js files
+Open index.html to view the page that renders the Hello React component using webpack, 
+
+For the actual server and routes:
+	$ tsc
+	$ nodemon build/server.js
 
 ## Status
 Currently controllers 
