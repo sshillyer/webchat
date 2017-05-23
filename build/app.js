@@ -3,5 +3,5 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var ReactDOM = require("react-dom");
-var Hello_1 = require("./Hello");
-ReactDOM.render(React.createElement(Hello_1.default, { name: "Shawn" }), document.getElementById('root'));
+var ChatInterface_1 = require("./ChatInterface");
+ReactDOM.render(React.createElement(ChatInterface_1.default, { username: "bob" }), document.getElementById('root'));

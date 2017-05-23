@@ -1,4 +1,7 @@
 import * as express from 'express';
+import * as sio from 'socket.io';
+// import { Server} from 'http';
+
 
 import { ChatController } from './controllers';
 

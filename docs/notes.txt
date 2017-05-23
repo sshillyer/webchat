@@ -58,10 +58,13 @@ Install Typings (May not have needed *all* of these)
 	typings install dt~node --save 
 	typings install dt~node --save --global
 	typings install dt~es6-shim --save --global
-	typings install dt~express --save --global
+	typings install dt~express --save
 	typings install dt~serve-static --save --global
-	typings install dt~express-serve-static-core --save --global
+	typings install dt~express-serve-static-core --save
 	typings install dt~mime --save --global
+
+
+	npm install ts-loader --save
 
 Install express
 	npm install express --save
