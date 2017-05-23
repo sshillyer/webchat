@@ -24,7 +24,7 @@ var UserMessage = (function () {
         configurable: true
     });
     UserMessage.prototype.toString = function () {
-        return this.data.username + this.data.message;
+        return this.data.username + ' said: ' + this.data.message;
     };
     return UserMessage;
 }());
