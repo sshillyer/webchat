@@ -53,6 +53,7 @@
   "exclude": [
     "node_modules",
     "typings/browser.d.ts",
-    "typings/browser"
+    "typings/browser",
+    "typings/globals/node"
   ]
 }

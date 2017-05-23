@@ -30,7 +30,8 @@
     "express": "^4.15.3",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "typescript": "^2.3.3"
+    "typescript": "^2.3.3",
+    "ws": "^3.0.0"
   },
   "keywords": []
 }

@@ -19,5 +19,4 @@ class ChatHistory extends React.Component<ChatHistoryProps, {}> {
         );
     }
 }
-
 export default ChatHistory;
