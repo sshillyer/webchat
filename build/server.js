@@ -6,5 +6,5 @@ var app = express();
 var port = process.env.PORT || 3000;
 app.use('/hello', controllers_1.ChatController);
 app.listen(port, function () {
-    console.log('Listening at http://localhost:${port}/');
+    console.log('Listening at http://localhost:' + port + '/'); // TODO: The replacement isn't happening here
 });

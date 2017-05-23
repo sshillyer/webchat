@@ -75,10 +75,14 @@ put the app files in own folder (app):
 
 Install REACT
 	npm install --save react react-dom
+Also install react Typings:
+	typings install --save react
+	typings install --save react-dom
+	
 
-Add folder
+--React page suggests I might want to install Babel -- Do I need if writing in TypeScript? TS already targeting ES5 in tsconfig.json
 
-websockets libary
+websockets libary??
 	npm install --save ws
 
 Make sure our compiled JS goes into a /build folder

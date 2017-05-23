@@ -15,3 +15,13 @@
 	- Timestamp?
 3. User has a text entry field where they can type a message and click "send"
 4. The message is sent to the server and added to the chat history; all clients on the server refresh with the new data
+
+
+## Usage
+Compile:
+    npm run build  # compiles to build/bundle.js
+	tsc  # compiles to separate js files
+Open index.html to view the page that renders the Hello React component using webpack, otherwise manually run the server.ts currently is basic node server; node build/server.js will run compiled version
+
+## Status
+Currently controllers 
