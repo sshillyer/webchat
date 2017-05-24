@@ -1,5 +1,9 @@
 import * as express from 'express';
+import * as React from 'react';
 // import * as ws from 'ws';
+import { renderToString } from 'react-dom/server';
+import App from './app';
+import template from './template';
 import WebSocket = require('ws');
 import Message = require('./models/message');
 import { ChatController } from './controllers';
@@ -37,7 +41,16 @@ function broadcast(data: string): void {
 
 
 const app: express.Application = express();
-app.use('/', ChatController);
+// app.use('/assets', express.static('assets')); // if we make css for this later
+// app.use('/', ChatController);
+app.get('/', (req, res) => {
+    const appString: string = renderToString(<App />);
+
+    // res.send(template({
+    //     body: appString,
+    //     title: 'Hello world from the server'
+    // }))
+});
 
 
 const port: number = process.env.PORT || 3001;

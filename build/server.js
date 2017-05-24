@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var express = require("express");
 // import * as ws from 'ws';
+var server_1 = require("react-dom/server");
 var WebSocket = require("ws");
 var Message = require("./models/message");
-var controllers_1 = require("./controllers");
 var serverPort = process.env.PORT || 3000;
 var WebSocketServer = WebSocket.Server;
 var server = new WebSocketServer({ port: serverPort });
@@ -27,7 +27,15 @@ function broadcast(data) {
 }
 ;
 var app = express();
-app.use('/', controllers_1.ChatController);
+// app.use('/assets', express.static('assets')); // if we make css for this later
+// app.use('/', ChatController);
+app.get('/', function (req, res) {
+    var appString = server_1.renderToString(/>););
+    // res.send(template({
+    //     body: appString,
+    //     title: 'Hello world from the server'
+    // }))
+});
 var port = process.env.PORT || 3001;
 app.listen(port, function () {
     console.log('Listening at http://localhost:' + port + '/'); // TODO: The replacement isn't happening here
