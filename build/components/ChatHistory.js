@@ -11,16 +11,20 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
-var ChatInterface_1 = require("./components/ChatInterface");
-var App = (function (_super) {
-    __extends(App, _super);
-    function App() {
+// TODO: Eliminate this Test code
+var messages = ["First message", "second message", "Another message"];
+var chatItems = messages.map(function (msg) {
+    return React.createElement("li", { key: msg }, msg);
+});
+var ChatHistory = (function (_super) {
+    __extends(ChatHistory, _super);
+    function ChatHistory() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    App.prototype.render = function () {
-        return (React.createElement("div", null,
-            React.createElement(ChatInterface_1.default, { username: "bob" })));
+    ChatHistory.prototype.render = function () {
+        return (React.createElement("div", { className: "chatHistory" },
+            React.createElement("ul", null, chatItems)));
     };
-    return App;
+    return ChatHistory;
 }(React.Component));
-exports.default = App;
+exports.default = ChatHistory;

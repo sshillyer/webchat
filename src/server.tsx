@@ -38,18 +38,16 @@ function broadcast(data: string): void {
 
 
 
-
-
 const app: express.Application = express();
-// app.use('/assets', express.static('assets')); // if we make css for this later
+app.use('/assets', express.static('assets')); // if we make css for this later
 // app.use('/', ChatController);
 app.get('/', (req, res) => {
     const appString: string = renderToString(<App />);
 
-    // res.send(template({
-    //     body: appString,
-    //     title: 'Hello world from the server'
-    // }))
+    res.send(template({
+        body: appString,
+        title: 'Hello world from the server'
+    }))
 });
 
 

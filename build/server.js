@@ -1,8 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var express = require("express");
+var React = require("react");
 // import * as ws from 'ws';
 var server_1 = require("react-dom/server");
+var app_1 = require("./app");
+var template_1 = require("./template");
 var WebSocket = require("ws");
 var Message = require("./models/message");
 var serverPort = process.env.PORT || 3000;
@@ -27,14 +30,14 @@ function broadcast(data) {
 }
 ;
 var app = express();
-// app.use('/assets', express.static('assets')); // if we make css for this later
+app.use('/assets', express.static('assets')); // if we make css for this later
 // app.use('/', ChatController);
 app.get('/', function (req, res) {
-    var appString = server_1.renderToString(/>););
-    // res.send(template({
-    //     body: appString,
-    //     title: 'Hello world from the server'
-    // }))
+    var appString = server_1.renderToString(React.createElement(app_1.default, null));
+    res.send(template_1.default({
+        body: appString,
+        title: 'Hello world from the server'
+    }));
 });
 var port = process.env.PORT || 3001;
 app.listen(port, function () {

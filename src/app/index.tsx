@@ -1,4 +1,5 @@
-import * as React from "react";
+import * as React from 'react';
+import ChatInterface from './components/ChatInterface';
 
 interface AppProps {
 
@@ -8,7 +9,7 @@ export default class App extends React.Component<AppProps, {}> {
   render() {
     return (
       <div>
-        <h1>hello world</h1>
+        <ChatInterface username="bob" />
       </div>
     );
   }

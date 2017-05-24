@@ -11,16 +11,18 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
-var ChatInterface_1 = require("./components/ChatInterface");
-var App = (function (_super) {
-    __extends(App, _super);
-    function App() {
+var MessageEntry = (function (_super) {
+    __extends(MessageEntry, _super);
+    function MessageEntry() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    App.prototype.render = function () {
+    MessageEntry.prototype.render = function () {
         return (React.createElement("div", null,
-            React.createElement(ChatInterface_1.default, { username: "bob" })));
+            React.createElement("form", null,
+                React.createElement("label", { htmlFor: "messageInput" }, "Message"),
+                React.createElement("input", { type: "text", name: "message", value: "", id: "messageInput" }),
+                React.createElement("input", { type: "submit", value: "Send" }))));
     };
-    return App;
+    return MessageEntry;
 }(React.Component));
-exports.default = App;
+exports.default = MessageEntry;

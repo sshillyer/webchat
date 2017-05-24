@@ -6,7 +6,7 @@ var config = {
    * recursively go through every "require" statement in app.ts and
    * efficiently build out the application's dependency tree.
    */
-  entry: ["./src/app.tsx"],
+  entry: ["./src/app-react-test.tsx"],
 
 
   output: {

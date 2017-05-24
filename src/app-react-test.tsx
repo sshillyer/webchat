@@ -2,11 +2,10 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import Hello from "./Hello"; // TODO: Delete import
-import UserLogin from "./UserLogin";
-import MessageEntry from "./MessageEntry";
-import ChatHistory from "./ChatHistory";
-import ChatInterface from "./ChatInterface";
+import UserLogin from "./app/components/UserLogin";
+import MessageEntry from "./app/components/MessageEntry";
+import ChatHistory from "./app/components/ChatHistory";
+import ChatInterface from "./app/components/ChatInterface";
 
 ReactDOM.render(
     <ChatInterface username="bob"/>,
