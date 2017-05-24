@@ -7,6 +7,7 @@ interface AppProps {
 
 export default class App extends React.Component<AppProps, {}> {
   render() {
+
     return (
       <div>
         <ChatInterface username="bob" />

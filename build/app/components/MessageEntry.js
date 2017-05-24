@@ -18,10 +18,9 @@ var MessageEntry = (function (_super) {
     }
     MessageEntry.prototype.render = function () {
         return (React.createElement("div", null,
-            React.createElement("form", null,
-                React.createElement("label", { htmlFor: "messageInput" }, "Message"),
-                React.createElement("input", { type: "text", name: "message", value: "", id: "messageInput" }),
-                React.createElement("input", { type: "submit", value: "Send" }))));
+            React.createElement("label", { htmlFor: "messageInput" }, "Message"),
+            React.createElement("input", { type: "text", name: "message", value: "", id: "messageInput" }),
+            React.createElement("button", { onClick: function () { return alert('oh snap'); } }, "Send")));
     };
     return MessageEntry;
 }(React.Component));

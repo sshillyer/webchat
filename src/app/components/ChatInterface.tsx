@@ -17,6 +17,11 @@ class ChatInterface extends React.Component<ChatInterfaceProps, {}> {
             </div>
         );
     }
+
+    handleSend() {
+        // Not sure how to get the onclick handler working with TypeScript; tutorial makes it look easy.
+        alert("Clicked!");
+    }
 }
 
 export default ChatInterface;

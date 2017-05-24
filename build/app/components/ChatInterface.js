@@ -23,6 +23,10 @@ var ChatInterface = (function (_super) {
             React.createElement(ChatHistory_1.default, null),
             React.createElement(MessageEntry_1.default, { username: this.props.username, message: "" })));
     };
+    ChatInterface.prototype.handleSend = function () {
+        // Not sure how to get the onclick handler working with TypeScript; tutorial makes it look easy.
+        alert("Clicked!");
+    };
     return ChatInterface;
 }(React.Component));
 exports.default = ChatInterface;
